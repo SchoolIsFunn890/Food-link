@@ -1,16 +1,19 @@
 body{
     padding: 0px;
     margin: 0px; 
+    background-color: red;
 }
 
 .headerContainer{
-    flex-direction: column;
+    flex-direction: row;
     width: 100%;
     height: 10vh;
     background-color: rgb(159, 235, 138);
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 60px;
+
 }
 
 
@@ -37,4 +40,39 @@ body{
     width: 100%;
     height: 10vh;
     background-color: rgb(132, 255, 0);
+}
+
+menu{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 50px;
+    background-color: rgb(215, 239, 198);
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;  
+    text-decoration: none;  
+    padding: 0px;
+    overflow: hidden;
+
+}
+
+iframe{
+    width: 100%;
+    height: 100vh;
+}
+
+#displayNo{
+    display: none;
+}
+
+.display{
+    display: flex;
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    position: absolute;
+    transform: translateY(85px);
+    border-radius: 5px;
+
 }
