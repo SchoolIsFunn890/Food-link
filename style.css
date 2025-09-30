@@ -1,19 +1,24 @@
 body{
     padding: 0px;
     margin: 0px; 
-    background-color: red;
+    background-image: url("imgs/back.jpg");
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+    color: white;
 }
 
+
 .headerContainer{
+    display: flex;
     flex-direction: row;
     width: 100%;
-    height: 10vh;
-    background-color: rgb(159, 235, 138);
-    display: flex;
+    height: auto;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 60px;
-
+    gap: 32px;
+    background-color: rgba(0, 0, 0, 0.504);
 }
 
 
@@ -22,8 +27,6 @@ body{
     height: 50px;
     font-size: 40px;
     border-radius: 20px;
-    box-shadow: 5px 5px rgb(119, 206, 73);
-    background-color: rgb(104, 192, 57);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -33,28 +36,43 @@ body{
 .centerContainer{
     width: 100%;
     height: 80vh;
-    background-color: rgb(165, 233, 63);
+    line-height: 80px;
+
 }
 
 .centerFooter{
     width: 100%;
     height: 10vh;
-    background-color: rgb(132, 255, 0);
 }
 
 menu{
+        position: relative;
+
     display: flex;
     flex-direction: column;
-    width: 60px;
+    width: auto;
     height: 50px;
-    background-color: rgb(215, 239, 198);
     border-radius: 20px;
     justify-content: center;
     align-items: center;  
     text-decoration: none;  
     padding: 0px;
-    overflow: hidden;
+    font-weight: bold;
+    font-size: 20px;
+}
 
+.headerLink{
+    display: flex;
+    flex-direction: column;
+    width: 80px;
+    height: 50px;
+    border-radius: 20px;
+    justify-content: center;
+    align-items: center;  
+    text-decoration: none;  
+    padding: 0px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 iframe{
@@ -64,15 +82,45 @@ iframe{
 
 #displayNo{
     display: none;
+    
+}
+
+#displayNoDel, #displayNoPre, #displayNoPro{
+    display: none;
+    
 }
 
 .display{
     display: flex;
+    flex-direction: column;
     width: 100px;
-    height: 100px;
-    background-color: green;
+    height: auto;
     position: absolute;
-    transform: translateY(85px);
+    background-color: rgba(128, 128, 128, 0.549);
     border-radius: 5px;
+    font-size: 12px;
+    top: calc(80%);
+}
 
+a{
+    text-decoration: none;
+    color: whitesmoke;
+}
+
+img{
+    height: 50px;
+    width: 50px;
+}
+
+header{
+    font-weight: bold;
+    font-size: 100px;
+}
+
+div{
+    font-size: 40px;
+}
+
+.normal{
+    font-size: 20px;
 }
