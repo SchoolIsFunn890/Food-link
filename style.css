@@ -124,3 +124,44 @@ div{
 .normal{
     font-size: 20px;
 }
+
+
+
+.leftContainer > img{
+    height: auto;
+    width: 200px;
+}
+
+.leftContainer {
+    background-color: rgba(128, 128, 128, 0.549);
+}
+
+.bio{
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: auto;
+}
+
+.bio > p{
+    font-size: 30px;
+}
+
+.leftContainer > div{
+        font-size: 20px;
+        line-height: 20px;
+}
+
+p{
+    margin: 0px;
+    width: 100%;
+    background-color: rgba(128, 128, 128, 0.549);
+}
+
+
+.centerContainer > iframe{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    justify-self: center; 
+}
