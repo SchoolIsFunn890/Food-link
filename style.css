@@ -139,6 +139,7 @@ iframe{
     border-radius: 5px;
     font-size: 12px;
     top: calc(80%);
+    z-index: 10;
 }
 
 a{
@@ -163,7 +164,6 @@ div{
 .normal{
     font-size: 20px;
 }
-
 
 
 .leftContainer > img{
