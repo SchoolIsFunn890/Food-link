@@ -1,3 +1,38 @@
+/* =====================
+   0) DESIGN TOKENS
+   Define site-wide variables once and reuse them everywhere.
+   ===================== */
+:root {
+  /* colors */
+  --text: white;
+  --surface: rgba(13, 13, 13, 0.50);
+  --surface-strong: rgba(0, 0, 0, 0.75);
+  --surface-medium: rgba(255, 255, 255, 0.50);
+  --surface-light: rgba(255, 255, 255, 0.25);
+  --muted: rgba(255, 255, 255, 0.14);
+
+  /* radii */
+  --radius-lg: 20px;
+  --radius-md: 12px;
+  --radius-sm: 5px;
+
+  /* shadows */
+  --shadow-1: 0 4px 30px rgba(0, 0, 0, 0.25);
+  --shadow-2: 0 4px 16px rgba(0,0,0,0.2);
+
+  /* spacing */
+  --gap-2: 12px;
+  --gap-3: 32px;
+  --space-2: 16px;
+  --space-3: 20px;
+  --space-6: 40px;
+  --space-7: 60px;
+}
+/* =====================
+   1) GLOBAL STYLES
+   Apply a natural box layout model to all elements, but allowing components to change
+   the property as needed.
+   ===================== */
 body{
     padding: 0px;
     margin: 0px; 
@@ -5,7 +40,7 @@ body{
     background-repeat: no-repeat;
 	background-attachment: fixed;
 	background-size: cover;
-    color: white;
+    color: var(--text);
 }
 
 
@@ -17,8 +52,8 @@ body{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    gap: 32px;
-    background-color: rgba(0, 0, 0, 0.504);
+    gap: var(--gap-3);
+    background-color: var(--surface-medium);
 }
 
 
@@ -26,7 +61,7 @@ body{
     width: 50%;
     height: 50px;
     font-size: 40px;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,7 +75,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    color: white;
+    color: var(--text);
     display: flex;
     flex-direction: column;
     min-height: 100vh;
@@ -57,13 +92,13 @@ body{
 }
 
 .centerBox {
-    background-color: rgba(0, 0, 0, .85);
-    border-radius: 20px;
-    padding: 40px 60px;
+    background-color: var(--surface-strong);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-7);
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+    box-shadow: var(--shadow-1);
 }
 
 header{
@@ -91,7 +126,7 @@ menu{
     flex-direction: column;
     width: auto;
     height: 50px;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     justify-content: center;
     align-items: center;  
     text-decoration: none;  
@@ -105,7 +140,7 @@ menu{
     flex-direction: column;
     width: 80px;
     height: 50px;
-    border-radius: 20px;
+    border-radius: var(--radius-lg);
     justify-content: center;
     align-items: center;  
     text-decoration: none;  
@@ -136,7 +171,7 @@ iframe{
     height: auto;
     position: absolute;
     background-color: rgba(128, 128, 128, 0.549);
-    border-radius: 5px;
+    border-radius: var(--radius-sm);
     font-size: 12px;
     top: calc(80%);
     z-index: 10;
@@ -207,12 +242,12 @@ p{
 
 .team .teamTitle {
   width: min(900px, 92%);
-  padding: 16px 20px;
-  border-radius: 12px;
-  background: rgba(0, 0, 0, 0.75);
+  padding: var(--space-2) var(--space-3);
+  border-radius: var(--radius-md);
+  background: var(--surface-strong);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.14);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  border: 1px solid var(--muted);
+  box-shadow: var(--shadow-1);
   text-align: center;
   font-weight: 800;
   line-height: 1.2;
@@ -230,24 +265,24 @@ p{
     width: min(900px, 92%);
     display: grid;
     grid-template-columns: 96px 1fr 1fr;
-    gap: 12px;
+    gap: var(--gap-2);
     align-items: center;
     padding: 20px;
-    border-radius: 12px;
+    border-radius: var(--radius-md);
     background: rgba(13, 13, 13, 0.50);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.14);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: var(--shadow-1);
 }
 
 .team .bio .leftContainer {
     display: flex;                 
     flex-direction: column;        
     align-items: center;           
-    gap: 10px;                      
+    gap: var(--gap-2);                      
     text-align: center;
-    background: rgba(13, 13, 13, 0.50);
-    padding: 16px;
+    background: var(--surface-strong);
+    padding: var(--space-3);
            
 }
 
@@ -255,8 +290,8 @@ p{
     width: 84px;                   
     height: 84px;                  
     object-fit: cover;             
-    border-radius: 20px;           
-    border: 1px solid rgba(0, 0, 0, 0.55); 
+    border-radius: var(--radius-lg);           
+    border: var(--muted); 
 }
 
 .team .bio .leftContainer div:first-of-type {
