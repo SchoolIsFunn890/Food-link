@@ -11,7 +11,7 @@ const head = document.querySelector('head');
 
 const url = new URL(document.baseURI);
 
-base.href = url.origin + "Food-link";
+base.href = url.origin + "/Food-link";
 head.append(base);
 
 presentation.addEventListener(('mouseenter'), () => {
