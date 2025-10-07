@@ -42,7 +42,25 @@ prototype.addEventListener(('mouseleave'), () => {
 
 });
 
+// Additional behaviors that run after includes are loaded
+document.addEventListener('includes:loaded', () => {
+  // Fill current year
+  document.querySelectorAll('[data-year]').forEach(el => {
+    el.textContent = String(new Date().getFullYear());
+  });
 
+  // Smooth scroll for any .toTop links
+  document.querySelectorAll('a.toTop').forEach(a => {
+    a.addEventListener('click', (e) => {
+      const href = a.getAttribute('href') || '#top';
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const target = document.querySelector(href) || document.body;
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
 
 
 
