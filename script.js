@@ -6,6 +6,13 @@ const displayerDel = document.getElementById("displayNoDel");
 const displayerPre = document.getElementById("displayNoPre");
 const displayerPro = document.getElementById("displayNoPro");
 
+const base = document.createElement('base');
+const head = document.querySelector('head');
+
+const url = new URL(document.baseURI);
+
+base.href = url.origin;
+head.append(base);
 
 presentation.addEventListener(('mouseenter'), () => {
         displayerPre.className = "display";
