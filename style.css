@@ -2,7 +2,8 @@
 :root {
   /* colors */
   --text: white;
-  --surface: rgba(13, 13, 13, 0.50);
+  --surface: rgba(13, 13, 13, 0.85);
+  --dropdown-surface: rgba(13, 13, 13, 0.95);
   --surface-strong: rgba(0, 0, 0, 0.75);
   --surface-medium: rgba(255, 255, 255, 0.50);
   --surface-light: rgba(255, 255, 255, 0.25);
@@ -55,6 +56,18 @@ body{
   z-index: 4000;
 }
 
+.menu-arrow {
+  font-size: 0.85em;
+  margin-left: 6px;
+  opacity: 0.8;
+  transition: transform 0.2s;
+}
+
+.menu:hover .menu-arrow,
+.menu:focus-within .menu-arrow {
+  transform: rotate(180deg);
+}
+
 .headerContainer .headerLink,
 .headerContainer a {
   text-decoration: none;
@@ -66,7 +79,7 @@ body{
 }
 .headerContainer .headerLink:hover,
 .headerContainer a:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.50);
 }
 /* active page indicator (include.js adds .is-active) */
 .headerContainer a.is-active {
@@ -130,6 +143,58 @@ body{
   flex-direction: column;
 }
 
+.menu {
+  position: relative;
+  display: inline-block;
+}
+
+.menu-title {
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--text);
+  background: transparent;
+  transition: background 0.2s;
+}
+
+.menu-title:hover {
+  background: rgba(255,255,255,0.50);
+}
+
+.menu .dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: var(--dropdown-surface);
+  border: 1px solid var(--muted);
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow-1);
+  z-index: 5000;
+  flex-direction: column;
+}
+
+.menu:hover .dropdown,
+.menu:focus-within .dropdown {
+  display: flex;
+}
+
+.menu .dropdown a {
+  color: var(--text);
+  text-decoration: none;
+  padding: 6px 8px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.menu .dropdown a:hover {
+  background: rgba(255,255,255,0.08);
+}
+
 /* links inside panel */
 .headerContainer details.menu > nav a {
   color: var(--text);
@@ -140,7 +205,7 @@ body{
   font-size: 16px;
 }
 .headerContainer details.menu > nav a:hover {
-  background: rgba(255,255,255,0.08);
+  background: rgba(255,255,255,0.50);
 }
 
 /* mobile stack */

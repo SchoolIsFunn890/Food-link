@@ -15,38 +15,10 @@ base.href = url.origin + "/Food-link";
 head.append(base);
 
 presentation.addEventListener(('mouseenter'), () => {
-        displayerPre.className = "display";
-        displayerPre.removeAttribute("id");
-});
 
-presentation.addEventListener(('mouseleave'), () => {
-        displayerPre.id = "displayNoPre";
-        displayerPre.removeAttribute("class");
+// Event listeners for dropdown menus removed since CSS handles hover for <details class="menu">
 
-});
-
-
-deliverables.addEventListener(('mouseenter'), () => {
-        displayerDel.className = "display";
-        displayerDel.removeAttribute("id");
-});
-
-deliverables.addEventListener(('mouseleave'), () => {
-        displayerDel.id = "displayNoDel";
-        displayerDel.removeAttribute("class");
-
-});
-
-
-prototype.addEventListener(('mouseenter'), () => {
-        displayerPro.className = "display";
-        displayerPro.removeAttribute("id");
-});
-
-prototype.addEventListener(('mouseleave'), () => {
-        displayerPro.id = "displayNoPro";
-        displayerPro.removeAttribute("class");
-
+// Additional behaviors that run after includes are loaded
 });
 
 // Additional behaviors that run after includes are loaded
@@ -69,9 +41,5 @@ document.addEventListener('includes:loaded', () => {
   });
 });
 
-
-
-
-
-
+// Image credits:
 // https://stockcake.com/i/organized-pantry-shelves_1155144_917047
