@@ -10,8 +10,7 @@ const base = document.createElement('base');
 const head = document.querySelector('head');
 
 const url = new URL(document.baseURI);
-console.log(url.origin);
-console.log(url.origin == "https://schoolisfunn890.github.io");
+
 if(url.origin == "https://schoolisfunn890.github.io"){
   base.href = url.origin + "/Food-link/";
 } else {
