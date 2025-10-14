@@ -10,8 +10,11 @@ const base = document.createElement('base');
 const head = document.querySelector('head');
 
 const url = new URL(document.baseURI);
-
-base.href = url.origin + "/Food-link";
+if(url.origin == "https://schoolisfunn890.github.io/"){
+  base.href = url.origin + "/Food-link/";
+} else {
+  base.href = url.origin;
+}
 head.append(base);
 
 presentation.addEventListener(('mouseenter'), () => {
