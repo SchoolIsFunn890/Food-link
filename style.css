@@ -499,3 +499,35 @@ img{
 }
 /*END component: footer ----------------------------------------------------- */
 
+/* component: Glossary ----------------------------------------------------------- */
+
+.glossaryCenterContainer{
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-7);
+    display: grid;
+    flex-direction: column;
+}
+
+.glossaryHeader  {
+  background-color: var(--surface-strong);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-1);
+  text-align: center;
+  font-weight: 800;
+  font-size: clamp(2.5rem, 8vw, 6rem);}
+
+.glossaryTextBox{
+  background-color: var(--surface-strong);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6) var(--space-7);
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow-1);
+    line-height: 1.5;
+}
+/*END component: Glossary ----------------------------------------------------- */
+
+
+
